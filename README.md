@@ -15,7 +15,8 @@ actual overview to be filled in later.
 
 - NextJS : server-sided logic for server-sided rendering (SSR), great for SEO, makes loading pages faster for client. Must opt into 'use client' react scripts
 - Tailwind : CSS library
-- tailwindcss/forms: "A plugin that provides a basic reset for form styles that makes form elements easy to override with utilities." See: https://github.com/tailwindlabs/tailwindcss-forms
+  - tailwindcss/forms: Dynamic tailwind css classes based on form states. Provides basic reset for form styles and easier to override styles. See: https://github.com/tailwindlabs/tailwindcss-forms
+  - clsx : smaller sized tailwind?
 - Prisma : ORM, create tables in a human-readable way
 - MongoDB :
 - NodeJS : JS package manager

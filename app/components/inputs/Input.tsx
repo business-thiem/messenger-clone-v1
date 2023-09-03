@@ -60,7 +60,7 @@ const Input: React.FC<InputProps> = ({
 
           `,
             errors[id] && "focus:ring-rose-500",
-            disabled && "opacity"
+            disabled && "opacity-50 cursor-default"
           )}
         />
       </div>
