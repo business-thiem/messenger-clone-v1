@@ -1,4 +1,5 @@
 import { GiMagicHat } from "react-icons/gi";
+import AuthForm from "./components/AuthForm";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         {" "}
         Sign into your Account
       </h2>
+      <AuthForm />
     </div>
-    // auth form
   );
 }
