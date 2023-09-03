@@ -1,34 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Placeholder for image`<img src="https://raw.githubusercontent.com/business-thiem/NextJS13-scott-tut/main/assets/NextJS13-todo-ss1.png" width="1200" height="500">`
 
-## Getting Started
+# Overview
 
-First, run the development server:
+-for learning how messenger works
+actual overview to be filled in later.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## App Info
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+...
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### Example
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Tech used
 
-To learn more about Next.js, take a look at the following resources:
+- NextJS : server-sided logic for server-sided rendering (SSR), great for SEO, makes loading pages faster for client. Must opt into 'use client' react scripts
+- Tailwind : CSS library
+- Prisma : ORM, create tables in a human-readable way
+- MongoDB : 
+- NodeJS : JS package manager
+- Pusher API :
+- NextAuth : 
+- Prettier: Makes code look nice and formatted. Adds semicolons (good habit from Java)
+- Vitest: Unit test framework. See: https://vitest.dev/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Personal Notes
 
-## Deploy on Vercel
+Future TODO:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Known Bugs:
+...
+- UI additions:
+...
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Prisma Studio Notes:
+
+- `npm install @prisma/client`: package installation for production
+- `npm install prisma --save-dev`: for dev dependencies
+- `npx prisma format` cleans up schema after you finish. (Important: it also writes your side relations between models)
+- `npx prisma studio` displays DB on browser
+- `npx prisma generate && npm run build` in vercel build deployments (override)
+
+
+### Workflows guide for myself in future
+
+Vitest
+
+- terminal: `npm i @testing-library/jest-dom @testing-library/react vitest @vitejs/plugin-react-swc jsdom --save-dev`
+- create:
+
+  - vite.config.ts at root with the following. See: https://github.com/Hendrixer/fullstack-ai-nextjs/blob/main/vite.config.ts
+
+  ```ts
+  import { defineConfig } from 'vitest/config';
+  import react from '@vitejs/plugin-react-swc';
+
+  // https://vitejs.dev/config/
+  export default defineConfig({
+    plugins: [react()],
+    test: {
+      include: [
+        '**/**tests**/**/_.[jt]s?(x)',
+        '**/?(_.)+(spec|test).[jt]s?(x)',
+      ],
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: 'setupTests',
+      mockReset: true,
+    },
+  });
+  ```
+
+  - setupTests.ts at root
+  - tsconfig.node.json at root : this runs client side tests on server side (still no standardized configuration for nextjs13 yet)
+
+- add `"references": [{ "path": "./tsconfig.node.json" }]` to tsconfig.json
+- add `"test": "vitest"` to package.json scripts
+
+- create tests folder at root : create write tests. See home.test.tsx as sample
+- run tests with `npm test`
+- `npm build` if you want to build locally without vercel
