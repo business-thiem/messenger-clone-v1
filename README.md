@@ -11,28 +11,27 @@ actual overview to be filled in later.
 
 #### Example
 
-
 ## Tech used
 
 - NextJS : server-sided logic for server-sided rendering (SSR), great for SEO, makes loading pages faster for client. Must opt into 'use client' react scripts
 - Tailwind : CSS library
+- tailwindcss/forms: "A plugin that provides a basic reset for form styles that makes form elements easy to override with utilities." See: https://github.com/tailwindlabs/tailwindcss-forms
 - Prisma : ORM, create tables in a human-readable way
-- MongoDB : 
+- MongoDB :
 - NodeJS : JS package manager
 - Pusher API :
-- NextAuth : 
+- NextAuth :
 - Prettier: Makes code look nice and formatted. Adds semicolons (good habit from Java)
 - Vitest: Unit test framework. See: https://vitest.dev/
-
 
 ## Personal Notes
 
 Future TODO:
 
 - Known Bugs:
-...
+  ...
 - UI additions:
-...
+  ...
 
 Prisma Studio Notes:
 
@@ -41,7 +40,6 @@ Prisma Studio Notes:
 - `npx prisma format` cleans up schema after you finish. (Important: it also writes your side relations between models)
 - `npx prisma studio` displays DB on browser
 - `npx prisma generate && npm run build` in vercel build deployments (override)
-
 
 ### Workflows guide for myself in future
 
@@ -53,20 +51,20 @@ Vitest
   - vite.config.ts at root with the following. See: https://github.com/Hendrixer/fullstack-ai-nextjs/blob/main/vite.config.ts
 
   ```ts
-  import { defineConfig } from 'vitest/config';
-  import react from '@vitejs/plugin-react-swc';
+  import { defineConfig } from "vitest/config";
+  import react from "@vitejs/plugin-react-swc";
 
   // https://vitejs.dev/config/
   export default defineConfig({
     plugins: [react()],
     test: {
       include: [
-        '**/**tests**/**/_.[jt]s?(x)',
-        '**/?(_.)+(spec|test).[jt]s?(x)',
+        "**/**tests**/**/_.[jt]s?(x)",
+        "**/?(_.)+(spec|test).[jt]s?(x)",
       ],
       globals: true,
-      environment: 'jsdom',
-      setupFiles: 'setupTests',
+      environment: "jsdom",
+      setupFiles: "setupTests",
       mockReset: true,
     },
   });
