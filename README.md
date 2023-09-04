@@ -40,6 +40,7 @@ Prisma Studio Notes:
 - `npm install prisma --save-dev`: for dev dependencies
 - `npx prisma format` cleans up schema after you finish. (Important: it also writes your side relations between models)
 - `npx prisma studio` displays DB on browser
+- `npx prisma db push` pushes your schema to the db URL in .env
 - `npx prisma generate && npm run build` in vercel build deployments (override)
 
 ### Workflows guide for myself in future
