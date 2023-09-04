@@ -18,7 +18,7 @@ actual overview to be filled in later.
   - tailwindcss/forms: Dynamic tailwind css classes based on form states. Provides basic reset for form styles and easier to override styles. See: https://github.com/tailwindlabs/tailwindcss-forms
   - clsx : smaller sized tailwind?
 - Prisma : ORM, create tables in a human-readable way
-- MongoDB :
+- MongoDB : DB for saving users and messages See MongoDB Atlas: https://cloud.mongodb.com/
 - NodeJS : JS package manager
 - Pusher API :
 - NextAuth :
