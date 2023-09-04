@@ -21,7 +21,9 @@ actual overview to be filled in later.
 - MongoDB : DB for saving users and messages See MongoDB Atlas: https://cloud.mongodb.com/
 - NodeJS : JS package manager
 - Pusher API :
-- NextAuth :
+- NextAuth : User account authentication library
+  - Use with `bcrypt` : "A library to help you hash passwords". NEVER store plain text PWs in DB. See: https://www.npmjs.com/package/bcrypt
+- Axios : "promise promise-based HTTP Client for node.js." See: https://axios-http.com/docs/intro
 - Prettier: Makes code look nice and formatted. Adds semicolons (good habit from Java)
 - Vitest: Unit test framework. See: https://vitest.dev/
 
@@ -43,7 +45,7 @@ Prisma Studio Notes:
 - `npx prisma db push` pushes your schema to the db URL in .env
 - `npx prisma generate && npm run build` in vercel build deployments (override)
 
-NextAuth Notes:
+NextAuth & bcrypt Notes:
 
 - `npm install next-auth@latest` installation
   - `npm install @prisma/client @next-auth/prisma-adapter bcrypt` and `npm install -D @types/bcrypt` for prisma & nextAuth integration
