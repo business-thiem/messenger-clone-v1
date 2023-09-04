@@ -43,6 +43,11 @@ Prisma Studio Notes:
 - `npx prisma db push` pushes your schema to the db URL in .env
 - `npx prisma generate && npm run build` in vercel build deployments (override)
 
+NextAuth Notes:
+
+- `npm install next-auth@latest` installation
+  - `npm install @prisma/client @next-auth/prisma-adapter bcrypt` and `npm install -D @types/bcrypt` for prisma & nextAuth integration
+
 ### Workflows guide for myself in future
 
 Vitest
