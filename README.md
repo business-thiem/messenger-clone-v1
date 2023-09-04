@@ -43,8 +43,8 @@ Prisma Studio Notes:
 - `npx prisma format` cleans up schema after you finish. (Important: it also writes your side relations between models)
 - make sure to use either no quotes or single quotes '' for .env variables. The parser doesn't recognize double quotes " ". See: https://github.com/prisma/prisma/discussions/12170#discussioncomment-3447194
   - `npx prisma generate`: loads new .env variables into prisma schema. Helps fix
-    - ```js
-      error: Error validating datasource `db`: the URL must start with the protocol `mongo
+    - ```ts
+      error: Error validating datasource `db`: the URL must start with the protocol `mongo`
       ```
 - `npx prisma studio` displays DB on browser
 - `npx prisma db push` pushes your schema to the db URL in .env
