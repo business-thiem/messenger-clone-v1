@@ -55,6 +55,10 @@ NextAuth & bcrypt Notes:
 
 - `npm install next-auth@latest` installation
   - `npm install @prisma/client @next-auth/prisma-adapter bcrypt` and `npm install -D @types/bcrypt` for prisma & nextAuth integration
+- Using the Google and Github auths:
+  - Located in github.com page settings for sign in and auth for signing in with Github credentials
+  - Located in https://console.cloud.google.com/ : in OAuth consent screen
+    - See: https://youtu.be/PGPGcKBpAk8?si=b1-onjJF1CGwDtKk&t=6913 to jog memory
 
 Misc. Notes:
 
