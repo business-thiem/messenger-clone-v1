@@ -55,7 +55,7 @@ const AuthForm = () => {
           toast.error("Invalid credentials");
         }
 
-        if (callback?.ok) {
+        if (callback?.ok && !callback?.error) {
           toast.success("Logged In!");
         }
       });
