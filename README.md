@@ -24,6 +24,7 @@ actual overview to be filled in later.
 - NextAuth : User account authentication library
   - Use with `bcrypt` : "A library to help you hash passwords". NEVER store plain text PWs in DB. See: https://www.npmjs.com/package/bcrypt
 - Axios : "promise promise-based HTTP Client for node.js." See: https://axios-http.com/docs/intro
+- React-Hot-Toast: Lightweight easy to use react toast notifcations. See: https://react-hot-toast.com/
 - Prettier: Makes code look nice and formatted. Adds semicolons (good habit from Java)
 - Vitest: Unit test framework. See: https://vitest.dev/
 
@@ -54,6 +55,13 @@ NextAuth & bcrypt Notes:
 
 - `npm install next-auth@latest` installation
   - `npm install @prisma/client @next-auth/prisma-adapter bcrypt` and `npm install -D @types/bcrypt` for prisma & nextAuth integration
+
+Misc. Notes:
+
+- New shorthand operators. This project is the first time using these. They are very cool:
+  - `?.` : Nullish Coalescing Operator
+  - `??` : Optional Chaining
+  - See: https://javascript.plainenglish.io/3-uses-of-in-javascript-why-pro-developers-love-using-javascript-operator-565bc8b235a4#:~:text=The%20JavaScript%20question%20mark%20dot,in%20the%20object%20or%20not. for more details explanation
 
 ### Workflows guide for myself in future
 
