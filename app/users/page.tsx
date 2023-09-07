@@ -1,5 +1,13 @@
+"use client";
+
+import { signOut } from "next-auth/react";
+
 const Users = () => {
-  return <div>Users PAge</div>;
+  return (
+    <div>
+      <button onClick={() => signOut}>Logout</button>
+    </div>
+  );
 };
 
 export default Users;
